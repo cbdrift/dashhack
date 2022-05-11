@@ -220,7 +220,7 @@ void GPS::ProcessMessage(QByteArray messageline)
 
     // First, we handle any potential binary messages
     if (messageline.contains(ACK10HZ)) {
-        qDebug() << "ACK 10Hz" <<messageline.toHex();
+        //qDebug() << "ACK 10Hz" <<messageline.toHex();
         m_dashboard->setgpsFIXtype("10Hz ACK");
         rateset = 1;
         removeNMEAmsg();
@@ -230,7 +230,7 @@ void GPS::ProcessMessage(QByteArray messageline)
 
     // Then we check if the message looks like a valid NMEA message
     if (!messageline.startsWith("$G")) {
-        qDebug() << "Not a NMEA message" << messageline.toHex();
+        //qDebug() << "Not a NMEA message" << messageline.toHex();
         return;
     }
 
@@ -308,13 +308,13 @@ void GPS::processGPRMC(const QString & line) {
      *10-20	Fair        Represents a low confidence level. Positional measurements should be discarded or used only to indicate a very rough estimate of the current location.
      *>20	Poor        At this level, measurements are inaccurate by as much as 300 meters with a 6 meter accurate device (50 DOP × 6 meters) and should be discarded.
      */
-    if ((hdop <= 5) && (speed > 3) )// Only update speed if HDOP value is smaller than 5 and discard speeds below 3 Km/h to prevent bouncing speeds when stationary
+    if ((hdop <= 5) && (speed >= 5))// Only update speed if HDOP value is smaller than 5 and discard speeds below 3 Km/h to prevent bouncing speeds when stationary
        {
         m_dashboard->setgpsSpeed(qRound(speed));  // round speed to the nearest integer
        }
     else
     {
-        if (speed >= 30)    //if he fix quality is Moderate show only speeds above 30 Km/h
+        if (speed >= 30)    //if the fix quality is Moderate show only speeds above 30 Km/h
         {
         m_dashboard->setgpsSpeed(qRound(speed));  // round speed to the nearest integer
         }
