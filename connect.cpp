@@ -175,7 +175,11 @@ void Connect::checkifraspberrypi()
             bool ok;
             int val = line.toInt(&ok);
            // qDebug() <<"Bright " << val ;
-            m_dashBoard->setBrightness(val);
+           // m_dashBoard->setBrightness(val);
+           // cbdrift : changed the line below to hardcode an initial dashboard brightess of 100 out of 255
+           // cbdrift : this is because it did not seem to pull a saved setting and loading the togglescreen dashboard stuffed brightness
+           // cbdrift : and it wouldnt revert back to decent brightness and the brightness slider is missing - so - this hack...  which works fine for me
+            m_dashBoard->setBrightness(100);
         inputFile.close();
     }
     if (QFileInfo::exists(path))
