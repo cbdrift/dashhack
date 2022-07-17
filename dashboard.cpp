@@ -2245,7 +2245,7 @@ void DashBoard::setLAMBDA(const qreal &LAMBDA)
 {
     if (m_LAMBDA == LAMBDA)
         return;
-    m_LAMBDA = LAMBDA* lamdamultiplicator;
+    m_LAMBDA = LAMBDA * lamdamultiplicator;
     emit lAMBDAChanged(m_LAMBDA);
 }
 
@@ -2253,7 +2253,8 @@ void DashBoard::setLAMBDATarget(const qreal &LAMBDATarget)
 {
     if (m_LAMBDATarget == LAMBDATarget)
         return;
-    m_LAMBDATarget = LAMBDATarget;
+ // cbdrift : changes  the setlamdatarget function to have the "* lamdamultiplicator" in it so both target and actual lambda are in the same format
+    m_LAMBDATarget = LAMBDATarget * lamdamultiplicator;
     emit lAMBDATargetChanged(LAMBDATarget);
 }
 
