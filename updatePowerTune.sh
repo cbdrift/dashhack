@@ -14,7 +14,9 @@ if [ -d /home/root ]; then
 		else
 		echo "Create source directory and clone PowerTune Repo"
 		mkdir /home/pi/src
-		git clone https://github.com/PowerTuneDigital/PowerTuneDigitalOfficial.git /home/pi/src
+#		git clone https://github.com/PowerTuneDigital/PowerTuneDigitalOfficial.git /home/pi/src
+#		change repository to my hack n slash one
+		git clone https://github.com/cbdrift/dashhack.git /home/pi/src
 		cd src
 		./updatedaemons.sh
 		./updateUserDashboards.sh
@@ -63,7 +65,9 @@ if nc -zw5 www.github.com 443; then
 		else
 		echo "Create source directory and clone PowerTune Repo"
 		mkdir /home/pi/src
-		git clone https://github.com/PowerTuneDigital/PowerTuneDigitalOfficial.git /home/pi/src  
+#		git clone https://github.com/PowerTuneDigital/PowerTuneDigitalOfficial.git /home/pi/src  
+#		change repository to my hack n slash one
+		git clone https://github.com/cbdrift/dashhack.git /home/pi/src
 		cd src
 		./updatedaemons.sh
 		./updateUserDashboards.sh
