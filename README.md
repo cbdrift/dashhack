@@ -18,3 +18,7 @@ changes from original
     now does the lamdamultiplicator factor the same as setlambda() does
 
   
+todo
+- fix the map sensor display to be in gauge (-100 to 100) not in absolute (0-200)
+  - have put in a hack into dashboard.cpp void DashBoard::setMAP(const qreal &MAP) to see if this does it
+
