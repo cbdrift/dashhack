@@ -1,0 +1,7 @@
+Square gauge,266,119,0,240,248,1,V,Battery Voltage,false,true,false,Dashboard,BatteryV,BatteryV,10000,-20000,lightsteelblue,black,lightsteelblue,white,white,blue,25,40,0,Lato,Lato,
+Square gauge,266,119,267.6654182272159,240,248,0,°C,ECT,false,true,false,Dashboard,Watertemp,Watertemp,10000,-20000,lightsteelblue,black,lightsteelblue,white,white,blue,25,40,0,Lato,Lato,
+Square gauge,266,119,0.9987515605493229,360.74844074844077,248,0,PSI,MAP,false,true,false,Dashboard,MAP,MAP,10000,-20000,lightsteelblue,black,lightsteelblue,white,white,blue,25,40,0,Lato,Lato,
+Square gauge,266,119,268.6641697877652,361.7463617463618,248,0,kPa,Boost (abs.),false,true,false,Dashboard,Intakepress,Intakepress,10000,-20000,lightsteelblue,black,lightsteelblue,white,white,blue,25,40,0,Lato,Lato,
+Square gauge,266,119,537.3283395755305,360.74844074844077,248,0, ,IAT,false,true,false,Dashboard,Intaketemp,Intaketemp,10000,-20000,lightsteelblue,black,lightsteelblue,white,white,blue,25,40,0,Lato,Lato,
+Square gauge,266,119,536.3295880149813,239.99999999999994,248,0, ,Gear,false,true,false,Dashboard,Gear,Gear,10000,-20000,lightsteelblue,black,lightsteelblue,white,white,blue,25,40,0,Lato,Lato,
+
